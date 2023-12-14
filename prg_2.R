@@ -35,3 +35,4 @@ for(record in student_records)
   cat("\n Average Marks",record$average)
   cat("\n Grade",record$grade,"\n")
 }
+
