@@ -18,11 +18,8 @@ cat("Standard Deviation of purchase Amount:", sd_purchase, "\n")
 cat("1st Quartile of purchase Amount:", q1_purchase, "\n")
 cat("3rd Quartile of purchase Amount:", q3_purchase, "\n")
 
-ggplot(purchase_data, aes(x = purchaseAmount)) +  # variable name should match the coloumn in dataframe
-  geom_histogram(binwidth = 50, fill = "blue", color = "black") +
-  labs(title = "Distribution of Purchase Amounts", x = "Purchase Amount", y = "Frequency")
 
-print(ggplot(purchase_data, aes(x = purchaseAmount)) +
+print(ggplot(purchase_data, aes(x = purchaseAmount)) + # variable name should match the coloumn in dataframe
         geom_histogram(binwidth = 50, fill = "blue", color = "black") +
         labs(title = "Distribution of Purchase Amounts", x = "Purchase Amount", y = "Frequency")
 )
