@@ -8,7 +8,7 @@ df <- data.frame(
 
 filtered_data <- filter(df,Age>25)
 selected_columns <- select(df, EMPID, Name, Salary)
-mutated_data <-mutate(df,Salary_Adjusted=ifelse(Salary>=60000,'High','Low'))
+mutated_data <-mutate(df,Score_Category=ifelse(Salary>=60000,'High','Low'))
 grouped_data <- group_by(df,Department)
 summarized_data <-summarize(grouped_data,
                             Avg_salary=mean(Salary),Max_Age=max(Age))
