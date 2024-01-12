@@ -5,9 +5,10 @@ df <- data.frame(
   Age=c(25,30,35,40,45),
   Salary=c(50000,60000,45000,70000,55000),
   Department=c("HR","IT","Finance","Production","QualityControl"))
+
 filtered_data <- filter(df,Age>25)
 selected_columns <- select(df, EMPID, Name, Salary)
-mutated_data <-mutate(df,Salary_Adjusted=Salary*1.1)
+mutated_data <-mutate(df,Salary_Adjusted=ifelse(Salary>=60000,'High','Low'))
 grouped_data <- group_by(df,Department)
 summarized_data <-summarize(grouped_data,
                             Avg_salary=mean(Salary),Max_Age=max(Age))
