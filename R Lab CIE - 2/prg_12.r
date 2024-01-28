@@ -10,8 +10,6 @@ IPL_data <- read_csv("C:/Users/ADMIN/Downloads/data.csv")
 str(IPL_data)
 summary(IPL_data)
 
-# Output summary statistics of numerical columns
-summary(IPL_data[, c("win_by_runs", "win_by_wickets")])
 
 # Task 2: Basic Data Insights
 # Calculate and display the total number of matches in the dataset
